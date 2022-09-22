@@ -7,7 +7,7 @@
 */
 
 
-/*JS lesson 9.1
+/*JS lesson 9.2
    const button = document.querySelector('button');
    button.style.cssText = 'position:absolute; top:0; left:0;';
 
@@ -56,10 +56,20 @@
    button.addEventListener('click', changePosition);
 */
 
-// JS lesson 9.4
-const button = document.querySelector('input');
+/* JS lesson 9.4
+     document.getElementById('vardas').addEventListener('input', event => {
+         const vardas = event.target.value;
+         document.body.style.backgroundColor = vardas.length < 3 ? 'red' : 'green';
+     });
+*/
 
 
+// JS lesson 9.5
+const buttonColor = ["red", "green", "blue", "yellow"]
+document.querySelector('button').addEventListener('click', event => {
+    const randomIndex = Math.round(Math.random() * 4);
+    event.target.style.backgroundColor = buttonColor[randomIndex];
+});
 
-// JS lesson 9.1
-// JS lesson 9.1
+
+// JS lesson 9.6
