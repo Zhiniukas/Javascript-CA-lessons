@@ -2,7 +2,7 @@ const showPosts = async (idNumber) => {
     const response = await fetch("https://jsonplaceholder.typicode.com/posts"); // "/posts" yra endpoint.
     const posts = await response.json();
 
-    console.log(posts[idNumber]);
+    console.log(posts);
     return (posts[idNumber])
 }
 
@@ -95,7 +95,7 @@ document.querySelector('form').addEventListener('submit', (event) => {
     event.preventDefault();
     const idValue = document.getElementById('input').value;
     console.log(idValue);
-    if (typeof (idValue) === "number") populateTable(postas[idValue])
+    if (typeof (idValue) === "number") populateTable(postas)
     else console.log(postas);
 })
 
